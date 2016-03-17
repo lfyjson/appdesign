@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>设计器</title>
+	<link rel="stylesheet" href="design/css/design.css" />
+</head>
+<body>
+	<script src="./design/js/tools/sea.js"></script>
+	<script>
+		if(window.location.origin.indexOf('cn') !== -1) {
+			seajs.use('./design/js/main.min');
+		} else {
+			seajs.use('./design/js/main');
+		}
+	</script>
+</body>
+</html>

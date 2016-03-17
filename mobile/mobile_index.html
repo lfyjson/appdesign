@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>预览</title>
+	<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+	<section class="main">
+
+	
+		<div class="form-item-text">
+			<div class="item-border">
+				<label for="" class="item-title">
+					单行输入框
+				</label>
+				<span class="item-text-wrap"><span class="item-span-text">显示文字</span></span>
+			</div>
+		</div>
+
+		<div class="form-item-text">
+			<div class="item-border">
+				<label for="" class="item-title">
+					单行输入框
+				</label>
+				<span class="item-text-wrap"><input type="text" class="item-text" placeholder="请输入" /></span>
+			</div>
+		</div>
+
+		<div class="form-item-number">
+			<div class="item-border">
+				<label for="" class="item-title">
+					数字输入框
+				</label>
+				<span class="item-text-wrap"><input type="number" class="item-text" placeholder="请输入" /></span>
+			</div>
+		</div>
+
+		<div class="form-item-textarea">
+			<div class="item-border">
+				<label for="" class="item-title">
+					多行输入框
+				</label>
+				<span class="item-text-wrap"><textarea class="item-text" placeholder="请输入"></textarea></span>
+			</div>
+		</div>
+
+		<div class="form-item-radio">
+			<div class="item-border">
+				<label for="" class="item-title">
+					单选框
+				</label>
+				<span class="item-native-text">请选择</span>
+				<select class="item-native">
+					<option value="选项一">选项一</option>
+					<option value="选项二">选项二</option>
+					<option value="选项三">选项三</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form-item-date">
+			<div class="item-border">
+				<label for="" class="item-title">
+					日期
+				</label>
+				<span class="item-native-text">请选择</span>
+				<input type="date" class="item-native" />
+			</div>
+		</div>
+
+		<div class="form-item-dateRange">
+			<div class="item-border">
+				<label for="" class="item-title">
+					开始时间
+				</label>
+				<span class="item-native-text">请选择</span>
+				<input type="date" class="item-native" />
+			</div>
+			<div class="item-border">
+				<label for="" class="item-title">
+					结束时间
+				</label>
+				<span class="item-native-text">请选择</span>
+				<input type="time" class="item-native" />
+			</div>
+		</div>
+	
+		<div class="form-item-image">
+			<div class="item-border">
+				<label for="" class="item-title">
+					图片
+					<input type="file" accept="image/*" class="item-native" />
+				</label>
+				
+				<div class="image-list">
+				</div>
+			</div>
+		</div>
+
+		<div class="form-item-detail">
+			<div class="detail-title-wrap">
+				<label for="" class="detail-title">明细(1)</label>
+			</div>
+			<div class="detail-area">
+				<div class="form-item-text">
+					<div class="item-border">
+						<label for="" class="item-title">
+							单行输入框
+						</label>
+						<span class="item-text-wrap"><input type="text" class="item-text" placeholder="请输入" /></span>
+					</div>
+				</div>
+				<div class="form-item-date">
+					<div class="item-border">
+						<label for="" class="item-title">
+							日期
+						</label>
+						<span class="item-native-text">请选择</span>
+						<input type="date" class="item-native" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="detail-title-wrap">
+				<label for="" class="detail-title">明细(2)</label>
+				<a class="detail-delete" data-action="delete-detail">删除</a>
+			</div>
+			<div class="detail-area">
+				<div class="form-item-text">
+					<div class="item-border">
+						<label for="" class="item-title">
+							单行输入框
+						</label>
+						<span class="item-text-wrap"><input type="text" class="item-text" placeholder="请输入" /></span>
+					</div>
+				</div>
+				<div class="form-item-date">
+					<div class="item-border">
+						<label for="" class="item-title">
+							日期
+						</label>
+						<span class="item-native-text">请选择</span>
+						<input type="date" class="item-native" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="detail-add" data-action="add-detail">增加明细</div>
+		</div>
+
+		<div class="form-item-approver">
+			<div class="item-border">
+				<label class="approver-title">审批人<em>(点击头像可删除)</em></label>
+				<ul class="approver-list">
+					<li>
+						 <span>小明明</span>
+						 <em>小明明</em>
+					</li>
+					<li>
+						<a class="add-approver"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="submit-btn-wrap">
+			<input type="button" value="提交" class="submit-btn" />
+		</div>
+
+	</section>
+	
+<!-- 	<div class="mask">
+		<div class="dialog">
+			<div class="dialog-main">会话框</div>
+			<div class="dialog-btns">
+				<input type="button" value="取消" />
+				<input type="button" value="确定" />
+			</div>
+		</div>
+	</div>
+ -->
+
+	<section class="select-approver">
+		<div class="approver-header">
+			<a class="approver-getback"></a>
+		</div>
+		<div class="select-approver-list">
+			<a><em>小明</em>小明</a>
+			<a><em>小明</em>小明</a>
+			<a><em>小明</em>小明</a>
+			<a><em>小明</em>小明</a>
+			<a><em>小明</em>小明</a>
+		</div>
+	</section>	
+
+	<script src="js/tools/sea.js"></script>
+	<script>
+		seajs.use('./js/main');
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>预览</title>
+	<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+	<script src="js/tools/sea.js"></script>
+	<script>
+		if(window.location.origin.indexOf('cn') !== -1) {
+			seajs.use('./js/main.min');
+		} else {
+			seajs.use('./js/main');
+		}
+	</script>
+</body>
+</html>
