@@ -28,7 +28,7 @@ if($action == 'upload') {
 
 	$base64_body = substr(strstr($natural,','),1);
 	$data= base64_decode($base64_body);
-	file_put_contents('saestor://design/img/'.date('y-m-d h:i:s',time()).'jpg',$data);
+	file_put_contents('saestor://design/img/'.date('y-m-d h:i:s',time()).'.jpg',$data);
 	 
 
 } else if($action = 'delete') {
