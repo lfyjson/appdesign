@@ -33,7 +33,8 @@ define(function (require, exports, module) {
 		designDataPath: 'php/data/',
 
 		//mobile模板数据js保存路径
-		mobileDataPath: '../php/data/'
+		// mobileDataPath: '../php/data/'
+		mobileDataPath: 'http://appdesign-design.stor.sinaapp.com/php/data/'
 	}
 
 	// a)http://10.8.10.55:8080/friendcircle/audit/addtemplate
