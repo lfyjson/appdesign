@@ -40,14 +40,14 @@ define("mobile/js/controller/load", [ "../view/templates", "../tools/method", ".
                 }
             }
         }
-        //审批人
-        main.innerHTML += Templates.getWidget({
-            type: "approver"
-        });
-        //提交按钮
-        main.innerHTML += Templates.getWidget({
-            type: "submit"
-        });
+        // //审批人
+        // main.innerHTML += Templates.getWidget({
+        //     type: 'approver'
+        // });
+        // //提交按钮
+        // main.innerHTML += Templates.getWidget({
+        //     type: 'submit'
+        // });
         //删除script
         if (script && script.parentNode) document.body.removeChild(script);
     };

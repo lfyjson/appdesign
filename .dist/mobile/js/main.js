@@ -388,14 +388,14 @@ define("mobile/js/controller/load", [ "../view/templates", "../tools/method", ".
                 }
             }
         }
-        //审批人
-        main.innerHTML += Templates.getWidget({
-            type: "approver"
-        });
-        //提交按钮
-        main.innerHTML += Templates.getWidget({
-            type: "submit"
-        });
+        // //审批人
+        // main.innerHTML += Templates.getWidget({
+        //     type: 'approver'
+        // });
+        // //提交按钮
+        // main.innerHTML += Templates.getWidget({
+        //     type: 'submit'
+        // });
         //删除script
         if (script && script.parentNode) document.body.removeChild(script);
     };
@@ -904,13 +904,11 @@ define("mobile/js/model/search", [ "../tools/method", "../../../config/config" ]
     //search json键值对
     if (sSearch !== null) {
         oSearch = parseSearch(sSearch);
-        console.log(sSearch);
-        console.log(oSearch);
     }
     //审批人列表
-    // if(oSearch && oSearch.torealname) {
-    // 	aApproverList = oSearch.torealname.split(',');
-    // }
+    if (oSearch && oSearch.torealname) {
+        aApproverList = oSearch.torealname.split(",");
+    }
     //得到location.search值
     function getSearch() {
         var search = decodeURI(window.location.search);
@@ -943,24 +941,27 @@ define("mobile/js/model/search", [ "../tools/method", "../../../config/config" ]
         var pathName = window.location.origin + window.location.pathname;
         return pathName.substring(0, pathName.lastIndexOf("/") + 1);
     }
-    if (oSearch && oSearch.tplid) {
-        //获取审批人信息
-        m.ajax({
-            type: "post",
-            url: require("../../../config/config").Path.getApprover,
-            data: sSearch,
-            success: function(data) {
-                data = JSON.parse(data);
-                if (data.status === 200) {
-                    console.log(data);
-                    aApproverList = data.result;
-                    exports.aApproverList = aApproverList;
+    // getApproverList();
+    function getApproverList() {
+        if (oSearch && oSearch.tplid) {
+            //获取审批人信息
+            m.ajax({
+                type: "post",
+                url: require("../../../config/config").Path.getApprover,
+                data: sSearch,
+                success: function(data) {
+                    data = JSON.parse(data);
+                    if (data.status === 200) {
+                        console.log(data);
+                        aApproverList = data.result;
+                        exports.aApproverList = aApproverList;
+                    }
+                },
+                error: function() {
+                    console.log("无");
                 }
-            },
-            error: function() {
-                console.log("无");
-            }
-        });
+            });
+        }
     }
     exports.sSearch = sSearch;
     exports.oSearch = oSearch;

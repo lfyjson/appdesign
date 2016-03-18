@@ -8,14 +8,12 @@ define(function(require, exports) {
     //search json键值对
     if (sSearch !== null) {
         oSearch = parseSearch(sSearch);
-        console.log(sSearch);
-        console.log(oSearch);
     }
 
     //审批人列表
-    // if(oSearch && oSearch.torealname) {
-    // 	aApproverList = oSearch.torealname.split(',');
-    // }
+    if(oSearch && oSearch.torealname) {
+    	aApproverList = oSearch.torealname.split(',');
+    }
 
     //得到location.search值
     function getSearch() {
@@ -54,25 +52,29 @@ define(function(require, exports) {
         return pathName.substring(0, pathName.lastIndexOf('/') + 1);
     }
 
-    if (oSearch && oSearch.tplid) {
-        //获取审批人信息
-        m.ajax({
-            type: 'post',
-            url: require('../../../config/config').Path.getApprover,
-            data: sSearch,
-            success: function(data) {
-                data = JSON.parse(data);
-                if (data.status === 200) {
-                    console.log(data);
-                    aApproverList = data.result;
-                    exports.aApproverList = aApproverList;
+    // getApproverList();
+    function getApproverList() {
+        if (oSearch && oSearch.tplid) {
+            //获取审批人信息
+            m.ajax({
+                type: 'post',
+                url: require('../../../config/config').Path.getApprover,
+                data: sSearch,
+                success: function(data) {
+                    data = JSON.parse(data);
+                    if (data.status === 200) {
+                        console.log(data);
+                        aApproverList = data.result;
+                        exports.aApproverList = aApproverList;
+                    }
+                },
+                error: function() {
+                    console.log('无');
                 }
-            },
-            error: function() {
-                console.log('无');
-            }
-        });
+            });
+        }
     }
+
 
 
     exports.sSearch = sSearch;

@@ -53,15 +53,15 @@ define(function(require, exports) {
             }
         }
 
-        //审批人
-        main.innerHTML += Templates.getWidget({
-            type: 'approver'
-        });
+        // //审批人
+        // main.innerHTML += Templates.getWidget({
+        //     type: 'approver'
+        // });
 
-        //提交按钮
-        main.innerHTML += Templates.getWidget({
-            type: 'submit'
-        });
+        // //提交按钮
+        // main.innerHTML += Templates.getWidget({
+        //     type: 'submit'
+        // });
 
         //删除script
         if (script && script.parentNode) document.body.removeChild(script);
