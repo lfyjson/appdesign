@@ -16,7 +16,7 @@ sleep(2);
 // 	echo $key.':'.$value.' | ';
 // }
 $data = $_POST['data'];
-file_put_contents('test.js', $data);
+// file_put_contents('test.js', $data);
 
 $arr = Array('status' => 200);
 echo json_encode($arr);

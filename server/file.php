@@ -21,7 +21,6 @@ if($action == 'upload') {
 	$thumb = $_POST['thumbbase64'];
 	//大图base64编码
 	$natural = $_POST['naturalbase64'];
-	file_put_contents('1.txt', $natural);
 
 	$arr = Array('status' => 200, 'thumb' => $thumb, 'natural' => $natural);
 
@@ -29,7 +28,7 @@ if($action == 'upload') {
 
 	$base64_body = substr(strstr($natural,','),1);
 	$data= base64_decode($base64_body);
-	file_put_contents('test.jpg',$data);
+	file_put_contents('saestor://design/img/'.date('y-m-d h:i:s',time()).'jpg',$data);
 	 
 
 } else if($action = 'delete') {

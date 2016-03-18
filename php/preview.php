@@ -10,7 +10,8 @@ $urlprefix = $_POST['urlprefix'];
 
 
 //数据文件夹路径
-$PATH = './data/';
+// $PATH = './data/';
+$PATH = 'saestor://design/data/';
 
 //修改云模板
 $fileName = $_POST['fileName'];
@@ -44,7 +45,7 @@ if(!is_dir($PATH.$orgid.'/pvw')) {
 }
 
 // 新建文件
-file_put_contents('saestor://design/'.$PATH.$datafile, "loadWidget('".$data."')");
+file_put_contents($PATH.$datafile, "loadWidget('".$data."')");
 
 //删除文件后缀
 $dataFilePath = substr($datafile, 0, -3);

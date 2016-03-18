@@ -37,7 +37,8 @@ if($action == 'create') {
 	}
 
 	//新建文件
-	file_put_contents("./data/".$datafile, "loadWidget('".$data."')");
+	// file_put_contents("./data/".$datafile, "loadWidget('".$data."')");
+	file_put_contents("saestor://design/data/".$datafile, "loadWidget('".$data."')");
 
 	//删除文件后缀
 	$dataFilePath = substr($datafile, 0, -3);

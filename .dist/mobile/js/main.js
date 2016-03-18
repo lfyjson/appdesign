@@ -1906,7 +1906,8 @@ define("config/config", [], function(require, exports, module) {
         //设计器模板数据js保存路径
         designDataPath: "php/data/",
         //mobile模板数据js保存路径
-        mobileDataPath: "../php/data/"
+        // mobileDataPath: '../php/data/'
+        mobileDataPath: "http://appdesign-design.stor.sinaapp.com/data/"
     };
     // a)http://10.8.10.55:8080/friendcircle/audit/addtemplate
     // -->增加审批模板接口
