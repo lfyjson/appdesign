@@ -44,7 +44,7 @@ if(!is_dir($PATH.$orgid.'/pvw')) {
 }
 
 // 新建文件
-file_put_contents($PATH.$datafile, "loadWidget('".$data."')");
+file_put_contents('design://'.$PATH.$datafile, "loadWidget('".$data."')");
 
 //删除文件后缀
 $dataFilePath = substr($datafile, 0, -3);
